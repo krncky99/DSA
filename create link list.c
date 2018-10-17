@@ -1,3 +1,4 @@
+//CREATE LINKED LIST
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
@@ -6,13 +7,14 @@ struct node
 	int data;
 	struct node *next;
 }*start=NULL; 
+//=========================CREATE FUNCTION FOR CREATE A LINKED LIST==========================
 void create()
 {
 int ch;
 struct node *newnode,*current;
 do
 {
-	newnode=(struct node*)malloc(sizeof(struct node));
+	newnode=(struct node*)malloc(sizeof(struct node));           //DYNAMIC MEMORY ALLOCATION
 	printf("enter data part\n");
 	scanf("%d",&newnode->data);
 	newnode->next=NULL;
@@ -27,10 +29,11 @@ do
 		current=newnode;
 	}
 	printf("enter your choice\n");
-	ch=getche();
+	ch=getche();           
 	
-	}while(ch!='n');
+	}while(ch!='n');         //IF YOU WANT TO EXIT PRESS n
 }
+//==============================DISPLAY FUNCTION FOR DISPLAY LINKED LIST===========================================
 void display()
 {
 	struct node *ptr;
@@ -41,9 +44,10 @@ void display()
 		ptr=ptr->next;
 	}
 }
+//========================================MAIN FUNCTION=============================================================
 int main()
 {
-	create();
-	display();
+	create();           //CALL CREATE FUCTION
+	display();          //CALL DISPLAY FUNCTION
 
-}
+}  //END OF MAIN FUCTION
