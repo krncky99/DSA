@@ -91,6 +91,4 @@ int main()
 	default :printf("Please Enter correct value\n");
 	break;
     }
-    
-}
-}
+   
